@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+
+  gem 'byebug'
+  gem 'sqlite3', '~> 1.4'
+end
+
+require_relative '../lib/process'
+
+require 'optparse'
+
+options = {}
+
+OptionParser.new do |parser|
+  parser.banner = "Usage: exposure-bot [options]"
+
+  parser.on("--slack-url=SLACK_URL", String, "") do |slack_url|
+    options[:slack_url] = slack_url
+  end
+
+  parser.on("--csv-url=CSV_URL", String, "") do |csv_url|
+    options[:csv_url] = csv_url
+  end
+
+  parser.on("--database=DATABASE", String, "") do |path|
+    options[:db] = SQLite3::Database.new(path)
+  end
+
+  parser.on("-h", "--help", "Prints this help.") do
+    puts parser
+    exit
+  end
+end.parse!
+
+ExposureBot::Process.new(options).start
