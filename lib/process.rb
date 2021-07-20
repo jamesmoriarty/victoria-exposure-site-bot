@@ -22,7 +22,7 @@ module ExposureBot
           sites = Service::Save.call(logger, db, sites)
           Service::NotifySlack.call(logger, db, sites, slack_url)
 
-          sleep 60
+          sleep 300
         rescue Interrupt
           logger.info("Exiting")
           exit(0)
