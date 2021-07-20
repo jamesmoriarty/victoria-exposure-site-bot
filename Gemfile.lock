@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    byebug (11.1.3)
+    sqlite3 (1.4.2)
+
+PLATFORMS
+  universal-darwin-20
+
+DEPENDENCIES
+  byebug
+  sqlite3 (~> 1.4)
+
+BUNDLED WITH
+   2.2.14

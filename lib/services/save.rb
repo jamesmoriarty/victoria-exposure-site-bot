@@ -12,7 +12,7 @@ module ExposureBot
 
         sites.each do |site|
           begin
-            row = db.execute("INSERT INTO sites VALUES ( NULL, ?, ?, ?, ?, ?, ? ) returning id;",
+            row = db.execute("INSERT INTO sites VALUES ( NULL, ?, ?, ?, ?, ?, ? )",
                              [
                                site.date,
                                site.time,
