@@ -13,7 +13,6 @@
 ## Layout
 
 ```
-tree lib 
 lib
 ├── models
 │   └── site.rb
@@ -22,8 +21,6 @@ lib
     ├── download.rb
     ├── notify_slack.rb
     └── save.rb
-
-2 directories, 5 files
 ```
 
 ## Usage
