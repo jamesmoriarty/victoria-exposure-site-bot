@@ -29,6 +29,7 @@ module ExposureBot
         rescue Exception => e
           logger.error("Error: #{e.message}")
           logger.debug(e.backtrace.join("\n"))
+          exit(1)
         end
       end
     end
