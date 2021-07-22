@@ -7,6 +7,8 @@ require_relative '../lib/process'
 require 'sqlite3'
 require 'optparse'
 
+STDOUT.sync = true
+
 options = {}
 
 OptionParser.new do |parser|

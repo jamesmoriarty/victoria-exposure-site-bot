@@ -64,7 +64,9 @@ module ExposureBot
 
           http = Net::HTTP.new(slack_uri.host, slack_uri.port)
           http.use_ssl = true if slack_uri.scheme == 'https'
-          http.post(slack_uri.path, payload.to_json, headers)
+          response = http.post(slack_uri.path, payload.to_json, headers)
+
+          logger.info "Status: #{response.code} Body: #{response.body}"
         rescue => e
           logger.error("Error: #{e.message}")
         ensure
