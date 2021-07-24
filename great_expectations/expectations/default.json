@@ -34,6 +34,22 @@
         "min_value": 0
       },
       "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Added_date",
+        "regex": "^[0-9]{1,2}/[0-9]{1,2}/2021"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Exposure_date",
+        "regex": "^[0-9]{1,2}/[0-9]{1,2}/2021"
+      },
+      "meta": {}
     }
   ],
   "meta": {

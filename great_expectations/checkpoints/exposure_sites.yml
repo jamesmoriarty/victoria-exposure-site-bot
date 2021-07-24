@@ -10,4 +10,4 @@ batches:
       reader_method: read_csv
       data_asset_name: exposure_sites
     expectation_suite_names:
-      - exposure_sites
+      - default
