@@ -1,0 +1,13 @@
+name: deploy
+config_version:
+module_name: great_expectations.checkpoint
+class_name: LegacyCheckpoint
+validation_operator_name:
+batches:
+  - batch_kwargs:
+      path: /Users/jamesmoriarty/src/exposure-bot/data/exposure_sites.csv
+      datasource: exposure_sites
+      reader_method: read_csv
+      data_asset_name: exposure_sites
+    expectation_suite_names:
+      - exposure_sites
