@@ -1,0 +1,58 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "default",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "Suburb",
+          "Site_title",
+          "Site_streetaddress",
+          "Site_state",
+          "Site_postcode",
+          "Exposure_date_dtm",
+          "Exposure_date",
+          "Exposure_time",
+          "Notes",
+          "Added_date_dtm",
+          "Added_date",
+          "Added_time",
+          "Advice_title",
+          "Advice_instruction",
+          "Exposure_time_start_24",
+          "Exposure_time_end_24"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "Site_postcode",
+        "max_value": 10000,
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Added_date",
+        "regex": "^[0-9]{1,2}/[0-9]{1,2}/2021"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Exposure_date",
+        "regex": "^[0-9]{1,2}/[0-9]{1,2}/2021"
+      },
+      "meta": {}
+    }
+  ],
+  "meta": {
+    "great_expectations_version": "0.13.24"
+  }
+}
