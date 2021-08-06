@@ -11,7 +11,7 @@ module ExposureBot
 
       <%= advice %>
 
-      <% if address != 0 %>*Address*: <%= address %> <%= postcode %>
+      <% if postcode != 0 %>*Address*: <%= [address, postcode].compact.join(' ') %>
       <% end %>
       *Time*: <%= time %>
     ERB
